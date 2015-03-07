@@ -51,66 +51,68 @@ full list of conversions:
 
 .. currentmodule:: django.db.models
 
-===============================     =========================================
+=================================== ==================================================
 Model field                         Form field
-===============================     =========================================
+=================================== ==================================================
 :class:`AutoField`                  Not represented in the form
 
 :class:`BigIntegerField`            :class:`IntegerField` with ``min_value``
                                     set to -9223372036854775808 and
                                     ``max_value`` set to 9223372036854775807.
 
-:class:`BooleanField`               :class:`BooleanField`
+:class:`BooleanField`               :class:`~django.forms.BooleanField`
 
-:class:`CharField`                  :class:`CharField` with ``max_length`` 
-                                    set to the model field's ``max_length``
+:class:`CharField`                  :class:`~django.forms.CharField` with 
+                                    ``max_length`` set to the model field's 
+				    ``max_length``
 
-:class:`CommaSeparatedIntegerField` :class:`CharField`
+:class:`CommaSeparatedIntegerField` :class:`~django.forms.CharField`
 
-:class:`DateField`                  :class:`DateField`
+:class:`DateField`                  :class:`~django.forms.DateField`
 
-:class:`DateTimeField`              :class:`DateTimeField`
+:class:`DateTimeField`              :class:`~django.forms.DateTimeField`
 
-:class:`DecimalField``              :class:`DecimalField`
+:class:`DecimalField`               :class:`~django.forms.DecimalField`
 
-:class:`EmailField`                 :class:`EmailField`
+:class:`EmailField`                 :class:`~django.forms.EmailField`
 
-:class:`FileField`                  :class:`FileField`
+:class:`FileField`                  :class:`~django.forms.FileField`
 
-:class:`FilePathField`              :class:`FilePathField`
+:class:`FilePathField`              :class:`~django.forms.FilePathField`
 
-:class:`FloatField`                 :class:`FloatField`
+:class:`FloatField`                 :class:`~django.forms.FloatField`
 
-:class:`ForeignKey`                 :class:`ModelChoiceField` (see below)
+:class:`ForeignKey`                 :class:`~django.forms.ModelChoiceField` 
+                                    (see below)
 
-:class:`ImageField`                 :class:`ImageField`
+``ImageField``                      :class:`~django.forms.ImageField`
 
-:class:`IntegerField`               :class:`IntegerField`
+:class:`IntegerField`               :class:`~django.forms.IntegerField`
 
-:class:`IPAddressField`             :class:`IPAddressField`
+``IPAddressField``                  ``IPAddressField``
 
-:class:`GenericIPAddressField`      :class:`GenericIPAddressField`
+:class:`GenericIPAddressField`      :class:`~django.forms.GenericIPAddressField`
 
-:class:`ManyToManyField`            :class:`ModelMultipleChoiceField`(see
-                                    below)
+:class:`ManyToManyField`            :class:`~django.forms.ModelMultipleChoiceField` 
+                                    (see below)
 
-:class:`NullBooleanField`           :class:`CharField`
+:class:`NullBooleanField`           :class:`~django.forms.CharField`
 
-:class:`PositiveIntegerField`       :class:`IntegerField`
+:class:`PositiveIntegerField`       :class:`~django.forms.IntegerField`
 
-:class:`PositiveSmallIntegerField`  :class:`IntegerField`
+:class:`PositiveSmallIntegerField`  :class:`~django.forms.IntegerField`
 
-:class:`SlugField`                  :class:`SlugField`
+:class:`SlugField`                  :class:`~django.forms.SlugField`
 
-:class:`SmallIntegerField`          :class:`IntegerField`
+:class:`SmallIntegerField`          :class:`~django.forms.IntegerField`
 
-:class:`TextField`                  :class:`CharField` with
+:class:`TextField`                  :class:`~django.forms.CharField` with
                                     ``widget=forms.Textarea``
 
-:class:`TimeField`                  :class:`TimeField`
+:class:`TimeField`                  :class:`~django.forms.TimeField`
 
-:class:`URLField`                   :class:`URLField`
-===============================     =========================================
+:class:`URLField`                   :class:`~django.forms.URLField`
+=================================== ==================================================
 
 .. currentmodule:: django.forms
 
