@@ -49,67 +49,68 @@ Each model field has a corresponding default form field. For example, a
 ``ManyToManyField`` is represented as a ``MultipleChoiceField``. Here is the
 full list of conversions:
 
-===============================  ========================================
-Model field                      Form field
-===============================  ========================================
-``AutoField``                    Not represented in the form
+.. currentmodule:: django.db.models
+===============================     ========================================
+Model field                         Form field
+===============================     ========================================
+:class:`AutoField`                  Not represented in the form
 
-``BigIntegerField``              ``IntegerField`` with ``min_value`` set
-                                 to -9223372036854775808 and ``max_value``
-                                 set to 9223372036854775807.
+:class:`BigIntegerField`            ``IntegerField`` with ``min_value`` set
+                                    to -9223372036854775808 and ``max_value``
+                                    set to 9223372036854775807.
 
-``BooleanField``                 ``BooleanField``
+:class:`BooleanField`               ``BooleanField``
 
-``CharField``                    ``CharField`` with ``max_length`` set to
-                                 the model field's ``max_length``
+:class:`CharField`                  ``CharField`` with ``max_length`` set to
+                                    the model field's ``max_length``
 
-``CommaSeparatedIntegerField``   ``CharField``
+:class:`CommaSeparatedIntegerField` ``CharField``
 
-``DateField``                    ``DateField``
+:class:`DateField`                  ``DateField``
 
-``DateTimeField``                ``DateTimeField``
+:class:`DateTimeField`              ``DateTimeField``
 
-``DecimalField``                 ``DecimalField``
+:class:`DecimalField``              ``DecimalField``
 
-``EmailField``                   ``EmailField``
+:class:`EmailField`                 ``EmailField``
 
-``FileField``                    ``FileField``
+:class:`FileField`                  ``FileField``
 
-``FilePathField``                ``FilePathField``
+:class:`FilePathField`              ``FilePathField``
 
-``FloatField``                   ``FloatField``
+:class:`FloatField`                 ``FloatField``
 
-``ForeignKey``                   ``ModelChoiceField`` (see below)
+:class:`ForeignKey`                 ``ModelChoiceField`` (see below)
 
-``ImageField``                   ``ImageField``
+:class:`ImageField`                 ``ImageField``
 
-``IntegerField``                 ``IntegerField``
+:class:`IntegerField`               ``IntegerField``
 
-``IPAddressField``               ``IPAddressField``
+:class:`IPAddressField`             ``IPAddressField``
 
-``GenericIPAddressField``        ``GenericIPAddressField``
+:class:`GenericIPAddressField`      ``GenericIPAddressField``
 
-``ManyToManyField``              ``ModelMultipleChoiceField`` (see
-                                 below)
+:class:`ManyToManyField`            ``ModelMultipleChoiceField`` (see
+                                    below)
 
-``NullBooleanField``             ``CharField``
+:class:`NullBooleanField`           ``CharField``
 
-``PositiveIntegerField``         ``IntegerField``
+:class:`PositiveIntegerField`       ``IntegerField``
 
-``PositiveSmallIntegerField``    ``IntegerField``
+:class:`PositiveSmallIntegerField`  ``IntegerField``
 
-``SlugField``                    ``SlugField``
+:class:`SlugField`                  ``SlugField``
 
-``SmallIntegerField``            ``IntegerField``
+:class:`SmallIntegerField`          ``IntegerField``
 
-``TextField``                    ``CharField`` with
-                                 ``widget=forms.Textarea``
+:class:`TextField`                  ``CharField`` with
+                                    ``widget=forms.Textarea``
 
-``TimeField``                    ``TimeField``
+:class:`TimeField`                  ``TimeField``
 
-``URLField``                     ``URLField``
-===============================  ========================================
-
+:class:`URLField`                   ``URLField``
+===============================     ========================================
+.. currentmodule:: django.forms
 
 As you might expect, the ``ForeignKey`` and ``ManyToManyField`` model field
 types are special cases:
