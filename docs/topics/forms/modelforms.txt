@@ -64,7 +64,7 @@ Model field                         Form field
 
 :class:`CharField`                  :class:`~django.forms.CharField` with 
                                     ``max_length`` set to the model field's 
-				    ``max_length``
+                                    ``max_length``
 
 :class:`CommaSeparatedIntegerField` :class:`~django.forms.CharField`
 
